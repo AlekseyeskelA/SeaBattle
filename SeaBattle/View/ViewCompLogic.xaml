@@ -1,0 +1,33 @@
+﻿<Window x:Class="SeaBattle.View.ViewCompLogic"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeaBattle.View"
+        mc:Ignorable="d"
+        WindowStartupLocation="Manual"
+        Title="GameWindow" Height="550" Width="550">
+    
+    <Grid>
+        <ItemsControl Name="PlayerItemsControl" Height="500" Width="500" ItemsSource="{Binding PlayerFieldCellsButtons}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="{Binding FieldSize}" Rows="{Binding FieldSize}"  DockPanel.Dock="Top">
+                        <UniformGrid.Resources>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="WhiteSmoke"/>
+                                <Setter Property="FontSize" Value="40"/>
+                                <!--<Setter Property="Command" Value="{Binding ClickOnFieldCellCommand}"/>
+                                    <Setter Property="CommandParameter" Value="{Binding Player}"/>-->
+                            </Style>
+                            <Style TargetType="Border">
+                                <Setter Property="BorderBrush" Value="Gray"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                            </Style>
+                        </UniformGrid.Resources>
+                    </UniformGrid>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </Grid>    
+</Window>

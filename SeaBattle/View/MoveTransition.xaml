@@ -1,0 +1,16 @@
+﻿<Window x:Class="SeaBattle.View.MoveTransition"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeaBattle.View"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Переход хода" Height="100" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="0,3,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Name="tbMT" HorizontalAlignment="Center" Margin="0,0,0,10"></TextBlock>
+            <Button x:Name="btnMT" Width="150" Height="22" Click="btnMT_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

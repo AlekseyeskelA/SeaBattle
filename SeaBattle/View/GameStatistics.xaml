@@ -1,0 +1,87 @@
+﻿<Window x:Class="SeaBattle.View.GameStatistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeaBattle.View"
+        mc:Ignorable="d"
+        Title="Статистика игры" Height="320" Width="450" ResizeMode="NoResize" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="1"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="180"></RowDefinition>
+            <RowDefinition Height="1"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Name="tbCG" Grid.Row="0" TextAlignment="Center"></TextBlock>
+        <StackPanel Grid.Row="1" Background="LightGray"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"></ColumnDefinition>
+                <ColumnDefinition Width="1"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="1"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="1" Background="LightGray"></TextBlock>
+            <TextBlock Grid.Column="2" TextAlignment="Center">Игрок 1</TextBlock>
+            <TextBlock Grid.Column="3" Background="LightGray"></TextBlock>
+            <TextBlock Grid.Column="4" TextAlignment="Center">Игрок 2</TextBlock>
+        </Grid>
+        
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"></ColumnDefinition>
+                <ColumnDefinition Width="1"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="1"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Margin="5,10,5,0" FontSize="10" TextAlignment="Left">Имя:</TextBlock>
+                <TextBlock Margin="5,10,5,0" FontSize="10" FontWeight="Bold" TextAlignment="Left">Победы/поражения:</TextBlock>
+                <TextBlock Margin="5,10,5,0" FontSize="10" TextAlignment="Left">Кол-во побед:</TextBlock>
+                <TextBlock Margin="5,10,5,0" FontSize="10" TextAlignment="Left">Кол-во поражений:</TextBlock>
+                <TextBlock Margin="5,10,5,0" FontSize="10" FontWeight="Bold" TextAlignment="Left">Попадания/промахи:</TextBlock>
+                <TextBlock Margin="5,10,5,0" FontSize="10" TextAlignment="Left">Кол-во попаданий:</TextBlock>
+                <TextBlock Margin="5,10,5,0" FontSize="10" TextAlignment="Left">Кол-во промахов:</TextBlock>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="1" Background="LightGray"/>
+            
+            <StackPanel Grid.Column="2">
+                <TextBlock Name="tbName1" Margin="5,10,5,0" TextAlignment="Center"></TextBlock>
+                <TextBlock Name="tbWD1" Margin="5,10,5,0" FontSize="10" FontWeight="Bold" TextAlignment="Right"></TextBlock>
+                <TextBlock Name="tbW1" Margin="5,10,5,0" FontSize="10" TextAlignment="Right"></TextBlock>
+                <TextBlock Name="tbD1" Margin="5,10,5,0" FontSize="10" TextAlignment="Right"></TextBlock>
+                <TextBlock Name="tbHM1" Margin="5,10,5,0" FontSize="10" FontWeight="Bold" TextAlignment="Right"></TextBlock>
+                <TextBlock Name="tbH1" Margin="5,10,5,0" FontSize="10" TextAlignment="Right"></TextBlock>
+                <TextBlock Name="tbM1" Margin="5,10,5,0" FontSize="10" TextAlignment="Right"></TextBlock>
+            </StackPanel>
+            
+            <StackPanel Grid.Column="3" Background="LightGray"/>
+            
+            <StackPanel Grid.Column="4">
+                <TextBlock Name="tbName2" Margin="5,10,5,0" TextAlignment="Center"></TextBlock>
+                <TextBlock Name="tbWD2" Margin="5,10,5,0" FontSize="10" FontWeight="Bold" TextAlignment="Right"></TextBlock>
+                <TextBlock Name="tbW2" Margin="5,10,5,0" FontSize="10" TextAlignment="Right"></TextBlock>
+                <TextBlock Name="tbD2" Margin="5,10,5,0" FontSize="10" TextAlignment="Right"></TextBlock>
+                <TextBlock Name="tbHM2" Margin="5,10,5,0" FontSize="10" FontWeight="Bold" TextAlignment="Right"></TextBlock>
+                <TextBlock Name="tbH2" Margin="5,10,5,0" FontSize="10" TextAlignment="Right"></TextBlock>
+                <TextBlock Name="tbM2" Margin="5,10,5,0" FontSize="10" TextAlignment="Right"></TextBlock>
+            </StackPanel>
+                      
+        </Grid>
+        
+        <StackPanel Grid.Row="4" Background="LightGray"/>
+        <StackPanel Grid.Row="5" Orientation="Vertical">
+            <Button Name="btnStopGame" Grid.Row="5" Height="20" Width="100" Margin="0,10,0,10" Click="btnStopGame_Click">Остановить игру</Button>
+            <CheckBox Name="cbViewOff" HorizontalAlignment="Center" Content="Отключить отображение"></CheckBox>
+        </StackPanel>
+        
+       
+    </Grid>
+</Window>
